@@ -3,7 +3,7 @@ resource "aws_instance" "ec2-control" {
     instance_type = "t2.medium"
     subnet_id = aws_subnet.public_subnet.id
     vpc_security_group_ids = [aws_security_group.sg_custom.id]
-    key_name = "infra"
+    key_name = "middleeast"
 
     tags = {
       "Name" = "ec2-control"
@@ -15,7 +15,7 @@ resource "aws_instance" "ec2-worker1" {
     instance_type = "t2.medium"
     subnet_id = aws_subnet.public_subnet.id
     vpc_security_group_ids = [aws_security_group.sg_custom.id]
-    key_name = "infra"
+    key_name = "middleeast"
 
     tags = {
       "Name" = "ec2-worker1"
@@ -27,7 +27,7 @@ resource "aws_instance" "ec2-worker2" {
     instance_type = "t2.medium"
     subnet_id = aws_subnet.public_subnet.id
     vpc_security_group_ids = [aws_security_group.sg_custom.id]
-    key_name = "infra"
+    key_name = "middleeast"
 
     tags = {
       "Name" = "ec2-worker2"
